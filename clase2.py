@@ -18,3 +18,6 @@ print(superior(sumarCien,[3,6,8]))
 #devuelve una lista elevando al cuadrado
 print(superior(elevaCuadrado,[3,6,8]))
 
+#funciones lambda 
+
+print(superior(lambda x: x**2, [3,6,8]))
