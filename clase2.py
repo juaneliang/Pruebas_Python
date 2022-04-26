@@ -21,3 +21,4 @@ print(superior(elevaCuadrado,[3,6,8]))
 #funciones lambda 
 
 print(superior(lambda x: x**2, [3,6,8]))
+
