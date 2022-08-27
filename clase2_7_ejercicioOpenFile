@@ -1,3 +1,10 @@
-file = open('C:\\Programacion\\Python\\Pruebas_Python\\clase2_7_ejercicioTestTxt.txt', 'r', 'utf-8')
-print(file.read())
-file.close()
+from encodings import utf_8
+
+
+fileR = open('C:\\Programacion\\Python\\Pruebas_Python\\clase2_7_ejercicioTestTxt.txt','r')
+fileW = open('C:\\Programacion\\Python\\Pruebas_Python\\clase2_7_ejercicioTestTxt.txt','w')
+print(fileR.read())
+#print(fileW.write("hola"))
+#print(fileR.read())
+fileR.close()
+fileW.close()
