@@ -1,3 +1,0 @@
-file = open('C:/Programacion/Python/Pruebas_Python/clase2_7.txt', 'r', 'utf-8')
-print(file.readline())
-file.close()
