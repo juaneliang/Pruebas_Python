@@ -1,0 +1,15 @@
+paises = {
+    "ar":"argentina",
+    "br":"brasil",
+    "us":"estados unidos",    
+    "es":"espania",
+}
+
+while True:
+    try:
+        paisesSeleccionado = input("elegir un codigo de pais: ")
+        print("el pais seleccionado es: " + paisesSeleccionado)
+    except ValueError:
+        print("El codigo no existe!, ingresar un codigo correcto: ")
+    else:
+        break
