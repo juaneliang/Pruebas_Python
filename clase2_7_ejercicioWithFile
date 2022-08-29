@@ -1,9 +1,11 @@
 from encodings import utf_8
 
 #MI PC
-#file = open('C:\\Programacion\\Python\\Pruebas_Python\\clase2_7_ejercicioTestTxt.txt','r')
+#with open('C:\\Programacion\\Python\\Pruebas_Python\\clase2_7_ejercicioTestTxt.txt', encoding=utf_8) as archivo:
 #TRABAJO PC
-file = open('C:\\Repositories\\Pruebas_Python2\\clase2_7_ejercicioTestTxt.txt','r')
+with open('C:\\Repositories\\Pruebas_Python2\\clase2_7_ejercicioTestTxt.txt', encoding=utf_8) as archivo:
+    for linea in archivo:
+        linea = linea.strip()
+        print(linea)
 
-print(file.read())
-file.close()
+#No hace falta usar el .close()
