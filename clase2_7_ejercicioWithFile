@@ -1,11 +1,31 @@
 from encodings import utf_8
 
-#MI PC
-#with open('C:\\Programacion\\Python\\Pruebas_Python\\clase2_7_ejercicioTestTxt.txt', encoding=utf_8) as archivo:
-#TRABAJO PC
-with open('C:\\Repositories\\Pruebas_Python2\\clase2_7_ejercicioTestTxt.txt', encoding=utf_8) as archivo:
-    for linea in archivo:
-        linea = linea.strip()
-        print(linea)
-
 #No hace falta usar el .close()
+
+#MI PC
+#'C:\\Programacion\\Python\\Pruebas_Python\\clase2_7_ejercicioTestTxt.txt'
+#TRABAJO PC
+#'C:\\Repositories\\Pruebas_Python2\\clase2_7_ejercicioTestTxt.txt'
+
+archivoALeer = 'C:\\Repositories\\Pruebas_Python2\\clase2_7_ejercicioTestTxt.txt'
+
+#Funcion con with para recorrer el archivo
+def leerArchivo(archivoALeer):
+    with open(archivoALeer, encoding='utf-8') as archivo:
+        for linea in archivo:
+            linea = linea.strip()
+            print(linea)
+    return linea
+
+#Funcion con with para escribir el archivo
+def escribirArchivo(archivoALeer):
+    with open(archivoALeer, 'w', encoding='utf-8') as archivo:
+        for i in range(3):    
+            archivo.write("Hola yo soy el rey parte 2\n")
+
+#Recorrer archivo primera vez
+leerArchivo(archivoALeer)
+#Escribir el archivo con lo que le pasamos 3 veces
+escribirArchivo(archivoALeer)
+#Lo vuelvo a recorrer
+leerArchivo(archivoALeer)
