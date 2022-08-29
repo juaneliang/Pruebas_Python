@@ -18,7 +18,7 @@ def leerArchivo(archivoALeer):
     return linea
 
 #Funcion con with para escribir el archivo
-def escribirArchivo(archivoALeer):
+def escribirArchivoTresVeces(archivoALeer):
     with open(archivoALeer, 'w', encoding='utf-8') as archivo:
         for i in range(3):    
             archivo.write("Hola yo soy el rey parte 2\n")
@@ -26,6 +26,6 @@ def escribirArchivo(archivoALeer):
 #Recorrer archivo primera vez
 leerArchivo(archivoALeer)
 #Escribir el archivo con lo que le pasamos 3 veces
-escribirArchivo(archivoALeer)
+escribirArchivoTresVeces(archivoALeer)
 #Lo vuelvo a recorrer
 leerArchivo(archivoALeer)
