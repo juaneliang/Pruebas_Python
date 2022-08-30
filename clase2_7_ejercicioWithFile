@@ -28,10 +28,10 @@ def leerArchivo(archivoALeer):
         print("El archivo esta vacio\n")
 
 #Funcion con with para escribir el archivo
-def escribirArchivo(archivoALeer):
+def escribirArchivo(archivoALeer,escribir):
     with open(archivoALeer, 'w', encoding='utf-8') as archivo:
-        for i in range(3):    
-            archivo.write("Hola yo soy el rey parte 2\n")
+        for i in range():    
+            archivo.write(escribir + "\n")
 
 #Opciones
 print("1_Vaciar Archivo \n")
@@ -51,6 +51,7 @@ while opcion != '0':
             #Recorrer archivo primera vez
             leerArchivo(archivoALeer)
         if opcion == '3':
-            escribirArchivo(archivoALeer)
+            escribir = input("\nEscribir que desea agregar en el archivo: \n")
+            escribirArchivo(archivoALeer,escribir)
 #Cerrar programa
 close()
