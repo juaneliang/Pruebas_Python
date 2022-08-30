@@ -1,4 +1,5 @@
 from asyncio.windows_events import NULL
+from datetime import date, datetime
 from encodings import utf_8
 from fileinput import close
 
@@ -29,9 +30,8 @@ def leerArchivo(archivoALeer):
 
 #Funcion con with para escribir el archivo
 def escribirArchivo(archivoALeer,escribir):
-    with open(archivoALeer, 'a', encoding='utf-8') as archivo:
-        for i in range():    
-            archivo.write(escribir + "\n")
+    with open(archivoALeer, 'a', encoding='utf-8') as archivo:  
+        archivo.write(escribir + "\n")
 
 #Opciones
 print("1_Vaciar Archivo \n")
