@@ -1,4 +1,6 @@
+from asyncio.windows_events import NULL
 from encodings import utf_8
+from fileinput import close
 
 #No hace falta usar el .close()
 
@@ -8,24 +10,50 @@ from encodings import utf_8
 #'C:\\Repositories\\Pruebas_Python2\\clase2_7_ejercicioTestTxt.txt'
 
 archivoALeer = 'C:\\Repositories\\Pruebas_Python2\\clase2_7_ejercicioTestTxt.txt'
+opcion = NULL
+
+#Funcion con with para recorrer el archivo
+def vaciarArchivo(archivoALeer):
+    with open(archivoALeer, 'w', encoding='utf-8') as archivo:
+        return archivoALeer
 
 #Funcion con with para recorrer el archivo
 def leerArchivo(archivoALeer):
-    with open(archivoALeer, encoding='utf-8') as archivo:
-        for linea in archivo:
-            linea = linea.strip()
-            print(linea)
-    return linea
+    try:
+        with open(archivoALeer, encoding='utf-8') as archivo:
+            for linea in archivo:
+                linea = linea.strip()
+                print(linea)
+        return linea
+    except UnboundLocalError:
+        print("El archivo esta vacio\n")
 
 #Funcion con with para escribir el archivo
-def escribirArchivoTresVeces(archivoALeer):
+def escribirArchivo(archivoALeer):
     with open(archivoALeer, 'w', encoding='utf-8') as archivo:
         for i in range(3):    
             archivo.write("Hola yo soy el rey parte 2\n")
 
-#Recorrer archivo primera vez
-leerArchivo(archivoALeer)
-#Escribir el archivo con lo que le pasamos 3 veces
-escribirArchivoTresVeces(archivoALeer)
-#Lo vuelvo a recorrer
-leerArchivo(archivoALeer)
+
+
+#Opciones
+print("1_Vaciar Archivo \n")
+print("2_Leer Archivo \n")
+print("3_Escribir Archivo \n")
+print("0_Salir \n")
+
+while True:
+    #try:
+    if opcion == '0':
+        exit()
+    if opcion == '1':
+        #Vaciar archivo
+        vaciarArchivo(archivoALeer)
+    if opcion == '2':
+        #Recorrer archivo primera vez
+        leerArchivo(archivoALeer)
+    if opcion == '3':
+        escribirArchivo(archivoALeer)
+    #except ValueError:
+        #print("Elegir una opcion correcta \n")
+
