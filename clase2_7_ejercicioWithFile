@@ -34,8 +34,6 @@ def escribirArchivo(archivoALeer):
         for i in range(3):    
             archivo.write("Hola yo soy el rey parte 2\n")
 
-
-
 #Opciones
 print("1_Vaciar Archivo \n")
 print("2_Leer Archivo \n")
@@ -44,8 +42,8 @@ print("0_Salir \n")
 
 while True:
     #try:
-    if opcion == '0':
-        exit()
+    #if opcion == '0':
+        #exit()
     if opcion == '1':
         #Vaciar archivo
         vaciarArchivo(archivoALeer)
