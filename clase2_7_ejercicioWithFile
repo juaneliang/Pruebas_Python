@@ -10,7 +10,6 @@ from fileinput import close
 #'C:\\Repositories\\Pruebas_Python2\\clase2_7_ejercicioTestTxt.txt'
 
 archivoALeer = 'C:\\Repositories\\Pruebas_Python2\\clase2_7_ejercicioTestTxt.txt'
-opcion = NULL
 
 #Funcion con with para recorrer el archivo
 def vaciarArchivo(archivoALeer):
@@ -40,18 +39,18 @@ print("2_Leer Archivo \n")
 print("3_Escribir Archivo \n")
 print("0_Salir \n")
 
-while True:
-    #try:
-    #if opcion == '0':
-        #exit()
-    if opcion == '1':
-        #Vaciar archivo
-        vaciarArchivo(archivoALeer)
-    if opcion == '2':
-        #Recorrer archivo primera vez
-        leerArchivo(archivoALeer)
-    if opcion == '3':
-        escribirArchivo(archivoALeer)
-    #except ValueError:
-        #print("Elegir una opcion correcta \n")
+#Seteo de variable opcion
+opcion = NULL
 
+while opcion != '0':
+        opcion = input("\nIngresar la opcion deseada: \n")
+        if opcion == '1':
+            #Vaciar archivo
+            vaciarArchivo(archivoALeer)
+        if opcion == '2':
+            #Recorrer archivo primera vez
+            leerArchivo(archivoALeer)
+        if opcion == '3':
+            escribirArchivo(archivoALeer)
+#Cerrar programa
+close()
