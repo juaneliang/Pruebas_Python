@@ -28,10 +28,10 @@ def leerArchivo(archivoALeer):
     except UnboundLocalError:
         print("El archivo esta vacio\n")
 
-#Funcion con with para escribir el archivo
-def escribirArchivo(archivoALeer,escribir):
+#Funcion con with para escribir el archivo y agrega fecha de hoy por cada cadena de string
+def escribirYLoguearArchivo(archivoALeer,escribir):
     with open(archivoALeer, 'a', encoding='utf-8') as archivo:  
-        archivo.write(escribir + "\n")
+        archivo.write(datetime.now().strftime("%m/%d/%Y, %H:%M:%S") + " " + escribir + "\n")
 
 #Opciones
 print("1_Vaciar Archivo \n")
@@ -52,6 +52,6 @@ while opcion != '0':
             leerArchivo(archivoALeer)
         if opcion == '3':
             escribir = input("Escribir que desea agregar en el archivo: \n")
-            escribirArchivo(archivoALeer,escribir)
+            escribirYLoguearArchivo(archivoALeer,escribir)
 #Cerrar programa
 close()
