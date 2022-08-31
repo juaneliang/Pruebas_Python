@@ -1,6 +1,3 @@
-from typing_extensions import Self
-
-
 class Persona:
     def __init__(self, nombre, edad):
         self.nombre = nombre
