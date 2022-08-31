@@ -13,6 +13,7 @@ class Banio:
         self.zone = zone
         self.enable = True
     
+#Registrar nuevo baño
     def registrarBanio(self):
         zone = chr(input("\nIngresar zona donde se encuentra el baño: ?n"))
         banio = Banio(zone)
@@ -21,12 +22,8 @@ class Banio:
 
     def agregarAListaBanios(banio):
 
-
-
-#Registrar nuevo baño
-
 #Chequear baños disponibles
 
 #Reportar problema en baño
 
-#Reportar resolucion problema en bañ0
+#Reportar resolucion problema en baño
