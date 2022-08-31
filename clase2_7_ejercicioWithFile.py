@@ -42,7 +42,7 @@ class Files:
             archivo.write(datetime.now().strftime("%m/%d/%Y, %H:%M:%S") + " " + escribir + "\n")
 
 #Opciones
-    print("1_Vaciar Archivo \n")
+    print("1_Vaciar Archivo --> Deshabilitado\n")
     print("2_Leer Archivo \n")
     print("3_Escribir Archivo \n")
     print("0_Salir \n")
@@ -52,9 +52,9 @@ class Files:
 
     while opcion != '0':
             opcion = input("\nIngresar la opcion deseada: \n")
-            if opcion == '1':
+            #if opcion == '1':
                 #Vaciar archivo
-                vaciarArchivo(archivoALeer)
+                #vaciarArchivo(archivoALeer)
             if opcion == '2':
                 #Recorrer archivo primera vez
                 leerArchivo(archivoALeer)
