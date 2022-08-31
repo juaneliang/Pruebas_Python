@@ -1,6 +1,6 @@
 class Persona:
     def __init__(self, nombre, edad):
-        print("\Persona creada\n")
+        print("\nPersona creada\n")
         self.nombre = nombre
         self.edad = edad
 
@@ -13,6 +13,10 @@ class Persona:
     def cumpleanios(self):
         self.edad += 1
 
+    def mostrarPersona(personaCreada):
+        print(f"La persona agregada se llama: {personaCreada.nombre} \nY cumplio: {personaCreada.edad} años.\n")
+
 personaCreada = Persona.agregarPersona()
 personaCreada.cumpleanios()
-print(f"La persona agregada se llama: {personaCreada.nombre} \nY cumplio: {personaCreada.edad} años.\n")
+personaCreada.mostrarPersona()
+#print(f"La persona agregada se llama: {personaCreada.nombre} \nY cumplio: {personaCreada.edad} años.\n")
