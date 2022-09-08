@@ -2,10 +2,10 @@ from persona import Persona
 
 class Empleado(Persona):
     def __init__(self, nombre, apellido, edad, dni, sector, puesto):
-        super.nombre = nombre
-        super.apellido = apellido
-        super.edad = edad
-        super.dni = dni
+        nombre = nombre
+        apellido = apellido
+        edad = edad
+        dni = dni
         self.sector = sector
         self.puesto = puesto
 
@@ -16,10 +16,13 @@ class Empleado(Persona):
         dni = int(input("Ingresar dni de la persona: \n"))
         sector = input("Ingresar sector de la persona: \n")
         puesto = input("Ingresar puesto de la persona: \n")
-        empleadoNuevo = (nombre, apellido, edad, dni, sector, puesto)
+        empleadoNuevo = Empleado(nombre, apellido, edad, dni, sector, puesto)
         print("Persona ingresada al sistema...\n")
-        print(f"nombre y apellido: \n{empleadoNuevo.nombre} {empleadoNuevo.apellido}\nedad: \n{empleadoNuevo.edad}\ndni: \n{empleadoNuevo.dni}")
-        print(f"n\sector y puesto: \n{empleadoNuevo.sector}/{empleadoNuevo.puesto}")
         return empleadoNuevo
-    
+
+    def mostrarEmpleado(empleadoNuevo):
+        print(f"nombre y apellido: \n{empleadoNuevo.nombre} {empleadoNuevo.apellido}\nedad: \n{empleadoNuevo.edad}\ndni: \n{empleadoNuevo.dni}")
+        print(f"n\sector y puesto: \n{empleadoNuevo.sector} {empleadoNuevo.puesto}")
+
 empleadoNuevo = Empleado.crearEmpleado()
+empleadoNuevo.mostrarEmpleado()
