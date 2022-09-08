@@ -1,4 +1,3 @@
-
 class Persona():
     def __init__(self, nombre, apellido, edad, dni):
         self.nombre = nombre
@@ -15,3 +14,4 @@ class Persona():
         print("Persona ingresada al sistema...\n")
         print(f"nombre y apellido: \n{personaNueva.nombre} {personaNueva.apellido}\nedad: \n{personaNueva.edad}\ndni: \n{personaNueva.dni}")
         return personaNueva
+
