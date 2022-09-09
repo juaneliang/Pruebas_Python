@@ -42,7 +42,7 @@ class Empleado(Persona):
 
     def mostrarEmpleado(empleadoNuevo):
         print(f"nombre y apellido: \n{empleadoNuevo.nombre} {empleadoNuevo.apellido}\nedad: \n{empleadoNuevo.edad}\ndni: \n{empleadoNuevo.dni}")
-        print(f"n\sector y puesto: \n{empleadoNuevo.sector} {empleadoNuevo.puesto}")
+        print(f"sector y puesto: \n{empleadoNuevo.sector} {empleadoNuevo.puesto}")
 
 empleadoNuevo = Empleado.crearEmpleado()
 empleadoNuevo.mostrarEmpleado()
