@@ -1,4 +1,6 @@
+import sqlite3
 from persona import Persona
+from base import Base
 
 class Empleado(Persona):
     def __init__(self, nombre, apellido, edad, dni, sector, puesto):
@@ -37,7 +39,8 @@ class Empleado(Persona):
             print("\nEl puesto debe tener solo letras!, por favor ingresar nuevamente... \n")
         #Creacion del empleado
         empleadoNuevo = Empleado(nombre, apellido, edad, dni, sector, puesto)
-        print("Persona ingresada al sistema...\n")
+        Base.empleadoEnBase(nombre, apellido, edad, dni, sector, puesto)
+        print("Persona ingresada al sistema correctamente...\n")
         return empleadoNuevo
 
     def mostrarEmpleado(empleadoNuevo):
@@ -45,5 +48,5 @@ class Empleado(Persona):
         print(f"Nombre y apellido: \n{empleadoNuevo.nombre} {empleadoNuevo.apellido}\nedad: \n{empleadoNuevo.edad}\ndni: \n{empleadoNuevo.dni}")
         print(f"Sector y puesto: \n{empleadoNuevo.sector} {empleadoNuevo.puesto}")
 
-empleadoNuevo = Empleado.crearEmpleado()
-empleadoNuevo.mostrarEmpleado()
+#empleadoNuevo = Empleado.crearEmpleado()
+#empleadoNuevo.mostrarEmpleado()
