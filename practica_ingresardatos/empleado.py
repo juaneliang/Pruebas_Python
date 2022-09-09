@@ -1,4 +1,3 @@
-import sqlite3
 from persona import Persona
 from base import Base
 
@@ -39,7 +38,7 @@ class Empleado(Persona):
             print("\nEl puesto debe tener solo letras!, por favor ingresar nuevamente... \n")
         #Creacion del empleado
         empleadoNuevo = Empleado(nombre, apellido, edad, dni, sector, puesto)
-        Base.empleadoEnBase(nombre, apellido, edad, dni, sector, puesto)
+        Base.crearEmpleadoBase(nombre, apellido, edad, dni, sector, puesto)
         print("Persona ingresada al sistema correctamente...\n")
         return empleadoNuevo
 
