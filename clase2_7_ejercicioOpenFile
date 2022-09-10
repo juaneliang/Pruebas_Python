@@ -1,5 +1,0 @@
-from encodings import utf_8
-
-file = open('C:\\Programacion\\Python\\Pruebas_Python\\clase2_7_ejercicioTestTxt.txt','r')
-print(file.read())
-file.close()
