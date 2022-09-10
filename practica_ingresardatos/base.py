@@ -20,3 +20,8 @@ class Base():
         cursor.execute(f"INSERT INTO empleados (dni) VALUES ({dni}")
         conexion.commit()
         conexion.close()
+
+    def mostrarEmpleadoBase():
+        cursor.execute(f"SELECT * FROM empleados")
+        conexion.commit()
+        conexion.close()
