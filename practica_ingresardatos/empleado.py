@@ -1,5 +1,9 @@
 from persona import Persona
 from base import Base
+import sqlite3
+
+conexion = sqlite3.connect("practica_ingresardatos\databaseEmpleado.sqlite")
+cursor = conexion.cursor()
 
 class Empleado(Persona):
     def __init__(self, nombre, apellido, edad, dni, sector, puesto):
@@ -38,7 +42,10 @@ class Empleado(Persona):
             print("\nEl puesto debe tener solo letras!, por favor ingresar nuevamente... \n")
         #Creacion del empleado
         empleadoNuevo = Empleado(nombre, apellido, edad, dni, sector, puesto)
-        Base.crearEmpleadoBase(nombre, apellido, edad, dni, sector, puesto)
+        cursor.execute(f"INSERT INTO empleados (nombre, apellido, edad, dni, sector, puesto) VALUES ({nombre}, {apellido}, {edad}, {dni}, {sector}, {puesto})")
+        conexion.commit()
+        conexion.close()
+        #Base.crearEmpleadoBase(empleadoNuevo.nombre, empleadoNuevo.apellido, empleadoNuevo.edad, empleadoNuevo.dni, empleadoNuevo.sector, empleadoNuevo.puesto)
         print("Persona ingresada al sistema correctamente...\n")
         return empleadoNuevo
 
