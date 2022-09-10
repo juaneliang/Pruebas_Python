@@ -1,4 +1,5 @@
 from empleado import *
+from base import mostrarEmpleadoBase
 
 print("------------MENU-----------")
 print("1-INGRESAR NUEVO EMPLEADO--")
@@ -20,6 +21,6 @@ if(opcion==3):
     pass
 if(opcion==4):
     #Mejorar el metodo
-    empleadoNuevo.mostrarEmpleado()
+    empleadoNuevo.mostrarEmpleadoBase()
 if(opcion==0):
     pass
