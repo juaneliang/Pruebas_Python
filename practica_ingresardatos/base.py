@@ -22,6 +22,10 @@ class Base():
         conexion.close()
 
     def mostrarEmpleadoBase():
-        cursor.execute(f"SELECT * FROM empleados")
-        conexion.commit()
+        cursor.execute(f"SELECT * FROM empleados;")
+        empleados = cursor.fetchall()
+        for e in empleados:
+            print(e)
         conexion.close()
+
+Base.mostrarEmpleadoBase()

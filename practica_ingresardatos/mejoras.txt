@@ -3,9 +3,4 @@
 #2- Nombre y apellido, Sector y puesto: empiecen con mayusculas y sigan con minucula.
 #3- Dni: que tenga 8 caracteres como minimo y como maximo. 
 #4- Edad: que sea mayor a 0, y que maximo sea 120.
-#5- Los datos deben ingresar a una base de datos a la tabla empleados.
-#6- Luego de ingresar los datos para nuevo/modificar/borrar que haya un Y/N para confirmar
-#7- 
-#8- 
-#9- 
-#10- 
+#5- Luego de ingresar los datos para nuevo/modificar/borrar que haya un Y/N para confirmar
