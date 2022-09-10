@@ -11,3 +11,4 @@ cursor.execute("INSERT INTO personas (nombre, edad) VALUES ('Eduardo', 30)")
 conexion.commit()
 #Se cierra la conexion
 conexion.close()
+#sdfsdfs
