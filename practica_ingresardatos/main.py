@@ -1,6 +1,9 @@
 from empleado import *
 from base import *
 
+conexion = sqlite3.connect("practica_ingresardatos\databaseEmpleado.sqlite")
+cursor = conexion.cursor()
+
 print("------------MENU-----------")
 print("1-INGRESAR NUEVO EMPLEADO--")
 print("2-MODIFICAR EMPLEADO-------")
@@ -13,13 +16,11 @@ opcion = input("\n--INGRESAR OPCION DESEADA--\n")
 if(opcion=="1"):
     empleadoNuevo = Empleado.crearEmpleado()
     empleadoNuevo.mostrarEmpleado()
-if(opcion==2):
-    #Crear el metodo
+elif(opcion=="2"):
     pass
-if(opcion==3):
-    #Crear el metodo
+elif(opcion=="3"):
     pass
-if(opcion==4):
+elif(opcion=="4"):
     Base.mostrarEmpleadoBase()
-if(opcion==0):
+elif(opcion=="0"):
     pass
