@@ -46,6 +46,3 @@ class Empleado(Persona):
         print(f"El empleado nuevo que se creo es...")
         print(f"Nombre y apellido: \n{empleadoNuevo.nombre} {empleadoNuevo.apellido}\nedad: \n{empleadoNuevo.edad}\ndni: \n{empleadoNuevo.dni}")
         print(f"Sector y puesto: \n{empleadoNuevo.sector} {empleadoNuevo.puesto}")
-
-#empleadoNuevo = Empleado.crearEmpleado()
-#empleadoNuevo.mostrarEmpleado()

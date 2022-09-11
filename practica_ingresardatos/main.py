@@ -21,6 +21,6 @@ elif(opcion=="2"):
 elif(opcion=="3"):
     pass
 elif(opcion=="4"):
-    Base.mostrarEmpleadoBase()
+    Base.mostrarEmpleadosBase()
 elif(opcion=="0"):
     pass
